@@ -19,7 +19,7 @@ group :assets do
   gem 'bootstrap-sass'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 2.3.0'
 
 group :development, :test do
   gem 'sqlite3'
@@ -43,7 +43,7 @@ group :test do
 end
 
 group :production do
-  gem 'mysql2'
+  gem 'pg'
 end
 
 gem 'haml'

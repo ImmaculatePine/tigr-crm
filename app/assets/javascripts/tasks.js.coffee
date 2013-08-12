@@ -8,7 +8,7 @@ jQuery ->
 
   $(document).ready ->
     input = $('#task_contact')
-    input.tokenInput '/contacts.json'
+    input.tokenInput '/contacts.json',
       theme: 'facebook'
       prePopulate: input.data('pre')    
       tokenLimit: 1

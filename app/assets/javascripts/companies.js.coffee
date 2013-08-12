@@ -42,6 +42,6 @@ jQuery ->
     $(this).closest('fieldset').hide()
     event.preventDefault()
     
-  $('#person_id').tokenInput '/people.json'
+  $('#person_id').tokenInput '/people.json',
     theme: 'facebook'      
     tokenLimit: 1
