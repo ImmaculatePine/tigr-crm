@@ -1,8 +1,6 @@
-OAUTH_CREDENTIALS = YAML.load_file(Rails.root.join("config", "oauth.yml"))[Rails.env]
-
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :twitter, OAUTH_CREDENTIALS['twitter']['app_id'], OAUTH_CREDENTIALS['twitter']['app_secret']
-  provider :yandex, OAUTH_CREDENTIALS['yandex']['app_id'], OAUTH_CREDENTIALS['yandex']['app_secret']
-  provider :google_oauth2, OAUTH_CREDENTIALS['google']['app_id'], OAUTH_CREDENTIALS['google']['app_secret'], { access_type: "offline", approval_prompt: "" }
-  provider :vkontakte, OAUTH_CREDENTIALS['vkontakte']['app_id'], OAUTH_CREDENTIALS['vkontakte']['app_secret'], {scope: 'notify'}
+  provider :twitter, ENV['TWITTER_APP_ID'], ENV['TWITTER_APP_SECRET']
+  provider :yandex, ENV['YANDEX_APP_ID'], ENV['YANDEX_APP_SECRET']
+  provider :google_oauth2, ENV['GOOGLE_APP_ID'], ENV['GOOGLE_APP_SECRET'], { access_type: "offline", approval_prompt: "" }
+  provider :vkontakte, ENV['VKONTAKTE_APP_ID'], ENV['VKONTAKTE_APP_SECRET'], {scope: 'notify'}
 end

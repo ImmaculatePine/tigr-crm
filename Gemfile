@@ -1,3 +1,5 @@
+ruby '1.9.3'
+
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
@@ -79,3 +81,5 @@ gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+gem 'heroku'
