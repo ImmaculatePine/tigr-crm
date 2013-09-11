@@ -16,4 +16,5 @@
 //= require jquery.tokeninput
 //= require jquery.ui.datepicker-ru
 //= require bootstrap
+//= require ckeditor/init
 //= require_tree .
